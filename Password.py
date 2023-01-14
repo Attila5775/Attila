@@ -9,17 +9,18 @@ username_input = input("Username: ")
 #pswd = input("Password: ")
 pswd = getpass.getpass('Password:')
 
-while (username != username_input) and (password != pswd):
-        tries -= 1
-        if tries == 0:
-            exit()
+while (username != username_input) or (password != pswd):
+    tries -= 1
+    if tries == 0:
+        print("Access deny!")
+        exit()
 
-        print(f"Incorrect username or password! You have left {tries} tries!")
-        username_input = input("Username: ")
-        pswd = getpass.getpass('Password:')
+    print(f"Incorrect username or password! You have left {tries} tries!")
+    username_input = input("Username: ")
+    pswd = getpass.getpass('Password:')
 
-        if (username == username_input) and (password == pswd):
-            print(f"Hello {username}! Welcome.")
+if (username == username_input) and (password == pswd):
+    print(f"Hello {username}! Welcome.")
 
    
 
