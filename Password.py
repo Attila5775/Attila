@@ -1,6 +1,6 @@
 import getpass
 
-username = "Robert"
+username = "John"
 password = "pass123"
 tries = 3
 
