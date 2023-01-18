@@ -11,19 +11,18 @@ tries = 3
 
 while number != number2:
     tries -= 1
-    print(f"Number {number2} was incorrect, still you have {tries} tries")
-    number2 = int(input("Enter a number between 1 - 6: "))
-
-    if tries == 1 :
-        print(f"Number {number2} was incorrect, still you have {tries} try")
-        tries -= 1
-        number2 = int(input("Enter a number between 1 - 6: "))
-
     if tries == 0 :
         print("Game over")
         print(f"The correct number was: {number}")
         print("="*50, "Guess Game", "="*50)
         exit()
+
+    tries_text = "tries"
+    if tries == 1:
+        tries_text = "try" 
+
+    print(f"Number {number2} was incorrect, still you have {tries} {tries_text}")
+    number2 = int(input("Enter a number between 1 - 6: "))
 
 print("Congrat you win!\n" f"My number was {number} too.")
 print("="*50, "Guess Game", "="*50)
