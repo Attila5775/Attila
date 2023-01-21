@@ -3,7 +3,7 @@ import random
 print("="*50, "Guess Game", "="*50)
 name = input("Enter your name: ")
 print('')
-print(f"Dear {name},\nThis is a game, where you have to guess a number between 1 - 5. You have three oportunities. Good luck!")
+print(f"Dear {name},\nThis is a game, where you have to guess a number between 1 - 6. You have three oportunities. Good luck!")
 
 number = random.randint(1, 6)
 number2 = int(input("Enter a number between 1 - 6: "))
