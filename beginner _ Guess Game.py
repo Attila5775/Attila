@@ -39,8 +39,8 @@ def clear_screen():
     os.system('cls')
 
 def new_game():
-    new_game = input("Would you like it again: y/n: ")
-    if new_game == "y":
+    new_games = input("Would you like it again: y/n: ")
+    if new_games == "y":
         game()
     else:
         exit()
