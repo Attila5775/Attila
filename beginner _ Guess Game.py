@@ -21,6 +21,7 @@ def intro():
 def game():
     user_guess = input("Enter your guess: ")
     while MACHINE_NUMBER != str(user_guess):
+        global TRIES
         TRIES -= 1
         print(f"Your guess was incorrect, please try it again. You still have {TRIES} tries.")
         user_guess = input("Enter your guess: ")
@@ -45,8 +46,4 @@ def new_game():
         exit()
 
 main()
-
-
-
-
 
