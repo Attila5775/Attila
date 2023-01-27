@@ -6,8 +6,8 @@ MACHINE_NUMBER = random.randint(1, 6)
 
 def main():
     clear_screen()
-    print(f"Dear {GAMER}, \nWelcome in the GUESS GAME! :)")
-    time.sleep(3)
+    #print(f"Dear {GAMER}, \nWelcome in the GUESS GAME! :)")
+    #time.sleep(3)
     clear_screen()
     intro()
     game()
@@ -16,12 +16,14 @@ def main():
 def intro():
     print("="*50, "Guess Game", "="*50)
     print(f"You have to guess a number between 1-6. You will have {TRIES} tries.")
-    time.sleep(5)
+    #time.sleep(5)
 
 def game():
+    global TRIES, MACHINE_NUMBER
+    TRIES = 3
+    MACHINE_NUMBER = random.randint(1, 6)
     user_guess = input("Enter your guess: ")
-    while MACHINE_NUMBER != str(user_guess):
-        global TRIES
+    while str(MACHINE_NUMBER) != user_guess:
         TRIES -= 1
         print(f"Your guess was incorrect, please try it again. You still have {TRIES} tries.")
         user_guess = input("Enter your guess: ")
@@ -31,9 +33,11 @@ def game():
             print("="*50, "Guess Game", "="*50)
             new_game()
 
-    if MACHINE_NUMBER == str(user_guess):
+    if str(MACHINE_NUMBER) == user_guess:
         print("You won! Congratulation!")
+        print(f"The number was: {MACHINE_NUMBER}")
         print("="*50, "Guess Game", "="*50)
+        new_game()
 
 def clear_screen():
     os.system('cls')
@@ -42,6 +46,7 @@ def new_game():
     new_games = input("Would you like it again: y/n: ")
     if new_games == "y":
         game()
+
     else:
         exit()
 
