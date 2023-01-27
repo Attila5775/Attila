@@ -6,7 +6,7 @@ MACHINE_NUMBER = random.randint(1, 6)
 
 def main():
     clear_screen()
-    print(f"Dear {GAMER}, \nWelcome in the GUESS GAME! :)")
+    print(f"Dear {GAMER}, \nWelcome in the GUESS GAME!")
     time.sleep(3)
     clear_screen()
     intro()
