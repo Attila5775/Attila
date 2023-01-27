@@ -6,8 +6,8 @@ MACHINE_NUMBER = random.randint(1, 6)
 
 def main():
     clear_screen()
-    #print(f"Dear {GAMER}, \nWelcome in the GUESS GAME! :)")
-    #time.sleep(3)
+    print(f"Dear {GAMER}, \nWelcome in the GUESS GAME! :)")
+    time.sleep(3)
     clear_screen()
     intro()
     game()
@@ -16,7 +16,7 @@ def main():
 def intro():
     print("="*50, "Guess Game", "="*50)
     print(f"You have to guess a number between 1-6. You will have {TRIES} tries.")
-    #time.sleep(5)
+    time.sleep(5)
 
 def game():
     global TRIES, MACHINE_NUMBER
@@ -51,4 +51,3 @@ def new_game():
         exit()
 
 main()
-
